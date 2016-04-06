@@ -1,6 +1,5 @@
-from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import TemplateView
 
 
-class LoginView(ListView):
+class LoginView(TemplateView):
     template_name = 'account/login.html'
