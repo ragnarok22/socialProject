@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#terms').click(function (event) {
+    $('#terms').click(function () {
         $('#spinner-terms').show(500);
         $('#terms-content').load('terms', function (response, status, xhr) {
             if(status == 'error'){
@@ -8,7 +8,7 @@ $(document).ready(function () {
             $('#spinner-terms').hide(500);
         });
     });
-    $('#about').click(function (event) {
+    $('#about').click(function () {
         $('#spinner-about').show(500);
         $('#about-content').load('about', function (response, status, xhr) {
             if(status == 'error'){
@@ -17,7 +17,7 @@ $(document).ready(function () {
             $('#spinner-about').hide(500);
         });
     });
-    $('#privacy').click(function (event) {
+    $('#privacy').click(function () {
         $('#spinner-privacy').show(500);
         $('#privacy-content').load('privacy', function (response, status, xhr) {
             if(status == 'error'){
