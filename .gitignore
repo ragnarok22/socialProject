@@ -60,6 +60,7 @@ target/
 
 #Ipython Notebook
 <<<<<<< HEAD
+<<<<<<< HEAD
 .ipynb_checkpoints
 
 # JetBrain folder
@@ -67,3 +68,6 @@ target/
 =======
 .ipynb_checkpoints
 >>>>>>> e05e2e0a0dcad878b4d922b00b80f6a2d474088a
+=======
+.ipynb_checkpoints
+>>>>>>> a04c2ad0745eaace037f7494a94f442cf92d6aa6
