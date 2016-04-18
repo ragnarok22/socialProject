@@ -1,4 +1,10 @@
 $(document).ready(function () {
+
+    $('select').material_select();
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+    $('.modal-trigger').leanModal();
+
     $('#terms').click(function () {
         $('#spinner-terms').show(500);
         $('#terms-content').load('terms', function (response, status, xhr) {

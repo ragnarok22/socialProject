@@ -2,12 +2,15 @@
 <html lang="es">
 <head>
     {% load staticfiles %}
+    {% load crispy_forms_tags %}
     <meta charset="UTF-8">
-    <meta name="description" content="Social Nertwork of University of Holguin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Social Network of University of Holguin">
     <title>The Wall - {% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/material.min.css' %}">
+    {#    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">#}
+    {#    <link rel="stylesheet" href="{% static 'css/material.min.css' %}">#}
     <link rel="stylesheet" href="{% static 'css/materialdesignicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/roboto.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/toastr.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
@@ -16,75 +19,86 @@
 <body>
 {% block content %}{% endblock %}
 <!--pie de la pagina-->
-<div class="panel-footer">
-    <footer class="card-footer text-center">&copy; 2015 - 2016. Creado por Ragnarok. Todos los derechos Reservados &REG;.
-        <a href="#" id="terms" data-toggle="modal" data-target="#terms-modal">Términos</a> |
-        <a href="#" id="about" data-toggle="modal" data-target="#about-modal">Acerca de</a> |
-        <a href="#" id="privacy" data-toggle="modal" data-target="#privacy-modal">Privacidad</a>
-    </footer>
-</div>
+<footer class="page-footer teal">
+    <div class="container">
+        <div class="row">
+            <div class="col l6">
+                <h5 class="white-text">¿Qué es The Wall?</h5>
+                <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias
+                    aperiam assumenda consectetur, dicta earum eius fuga ipsum natus nihil, non obcaecati officiis
+                    perspiciatis praesentium quod sed suscipit temporibus ullam?</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            &COPY; 2015 - 2016. Creado por Ragnarok. Todos los derechos reservados.
+            <a href="#terms-modal" class="white-text text-lighten-3 waves-effect waves-light modal-trigger" id="terms">
+                Términos
+            </a> |
+            <a href="#about-modal" class="white-text text-lighten-3 waves-effect waves-light modal-trigger" id="about">
+                Acerca de
+            </a> |
+            <a href="#privacy-modal" class="white-text text-lighten-3 waves-effect waves-light modal-trigger" id="privacy">
+                Privacidad
+            </a>
+        </div>
+    </div>
+</footer>
 <!--fin del pie de la pagina-->
 
 <!--terminos de la pagina-->
-<div id="terms-modal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content ligth-dark">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title">Términos</h4>
+<div id="terms-modal" class="modal">
+    <div class="modal-content ligth-dark">
+        <div class="modal-header">
+            <h4 class="modal-title">Términos</h4>
+        </div>
+        <div class="modal-body">
+            <div class="text-center">
+                <i class="fa fa-spinner fa-spin fa-5x" id="spinner-terms"></i>
             </div>
-            <div class="modal-body">
-                <div class="text-center">
-                    <i class="fa fa-spinner fa-spin fa-5x" id="spinner-terms"></i>
-                </div>
-                <div id="terms-content">
-                    {#                        contenido de los terminos#}
-                </div>
+            <div id="terms-content">
+                {#                        contenido de los terminos#}
             </div>
-            <div class="modal-footer">
-                <div class="text-left">
-                    <footer><strong>Grupo de desarrollo The Wall</strong></footer>
-                </div>
-                <button type="button" class="btn btn-material-teal-500 btn-raised" data-dismiss="modal">Cerrar</button>
+        </div>
+        <div class="modal-footer">
+            <div class="text-left">
+                <footer><strong>Grupo de desarrollo The Wall</strong></footer>
             </div>
+            <a class="modal-action modal-close waves-effect waves-green btn btn-flat">Cerrar</a>
         </div>
     </div>
 </div>
 <!--fin de los terminos-->
 
 <!--privacidad de la pagina-->
-<div id="privacy-modal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content ligth-dark">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title">Privacidad</h4>
+<div id="privacy-modal" class="modal">
+    <div class="modal-content ligth-dark">
+        <div class="modal-header">
+            <h4 class="modal-title">Privacidad</h4>
+        </div>
+        <div class="modal-body">
+            <div class="text-center">
+                <i class="fa fa-spinner fa-spin fa-5x" id="spinner-privacy"></i>
             </div>
-            <div class="modal-body">
-                <div class="text-center">
-                    <i class="fa fa-spinner fa-spin fa-5x" id="spinner-privacy"></i>
-                </div>
-                <div id="privacy-content">
-                    {#                        contenido de la privacidad#}
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="text-left">
-                    <footer><strong>Grupo de desarrollo The Wall</strong></footer>
-                </div>
-                <button type="button" class="btn btn-material-teal-500 btn-raised" data-dismiss="modal">Cerrar</button>
+            <div id="privacy-content">
+                {#                        contenido de la privacidad#}
             </div>
         </div>
+        <div class="modal-footer">
+            <div class="text-left">
+                <footer><strong>Grupo de desarrollo The Wall</strong></footer>
+            </div>
+        <a class="modal-action modal-close waves-effect waves-green btn btn-flat">Cerrar</a>        </div>
     </div>
 </div>
 <!--fin de la privacidad-->
 
 <!--acerca de la pagina-->
-<div id="about-modal" class="modal fade">
-    <div class="modal-dialog">
+<div id="about-modal" class="modal">
         <div class="modal-content ligth-dark">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h4 class="modal-title">Acerca de</h4>
             </div>
             <div class="modal-body">
@@ -99,22 +113,22 @@
                 <div class="text-left">
                     <footer><strong>Grupo de desarrollo The Wall</strong></footer>
                 </div>
-                <button type="button" class="btn btn-material-teal-500 btn-raised" data-dismiss="modal">Cerrar</button>
+                <a class="modal-action modal-close waves-effect waves-green btn btn-flat">Cerrar</a>
             </div>
         </div>
-    </div>
 </div>
 <!--fin del acerca de-->
 <script src="{% static 'js/jquery-2.0.1.min.js' %}"></script>
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-<script src="{% static 'js/material.min.js' %}"></script>
+{#<script src="{% static 'js/bootstrap.min.js' %}"></script>#}
+{#<script src="{% static 'js/material.min.js' %}"></script>#}
+<script src="{% static 'js/materialize.min.js' %}"></script>
 <script src="{% static 'js/toastr.min.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
-<script>
-    $.material.init();
-    $('[data-toggle="tooltip"]').tooltip();
-    $('[data-toggle="popover"]').popover();
-</script>
+{#<script>#}
+{#    $.material.init();#}
+{#    $('[data-toggle="tooltip"]').tooltip();#}
+{#    $('[data-toggle="popover"]').popover();#}
+{#</script>#}
 {% block script %}{% endblock %}
 </body>
 </html>
