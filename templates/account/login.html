@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
 {% block title %}Login{% endblock %}
 {% block content %}
-
+    <div class="row col l12">
+        {% crispy form %}
+    </div>
 {% endblock %}
