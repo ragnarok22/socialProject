@@ -56,8 +56,19 @@
             <h4 class="modal-title">Términos</h4>
         </div>
         <div class="modal-body">
-            <div class="text-center">
-                <i class="fa fa-spinner fa-spin fa-5x" id="spinner-terms"></i>
+            <div class="center-align" id="spinner-terms">
+                <div class="preloader-wrapper big active">
+                    <div class="spinner-layer spinner-blue-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                        <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                    </div>
+                </div>
+                {#                <i class="fa fa-spinner fa-spin fa-5x" id="spinner-terms"></i>#}
             </div>
             <div id="terms-content">
                 {#                        contenido de los terminos#}
@@ -80,8 +91,19 @@
             <h4 class="modal-title">Privacidad</h4>
         </div>
         <div class="modal-body">
-            <div class="text-center">
-                <i class="fa fa-spinner fa-spin fa-5x" id="spinner-privacy"></i>
+            <div class="center-align" id="spinner-privacy">
+                <div class="preloader-wrapper big active">
+                    <div class="spinner-layer spinner-blue-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                        <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                    </div>
+                </div>
+                {#                <i class="fa fa-spinner fa-spin fa-5x" id="spinner-privacy"></i>#}
             </div>
             <div id="privacy-content">
                 {#                        contenido de la privacidad#}
@@ -91,32 +113,43 @@
             <div class="text-left">
                 <footer><strong>Grupo de desarrollo The Wall</strong></footer>
             </div>
-        <a class="modal-action modal-close waves-effect waves-green btn btn-flat">Cerrar</a>        </div>
+            <a class="modal-action modal-close waves-effect waves-green btn btn-flat">Cerrar</a>        </div>
     </div>
 </div>
 <!--fin de la privacidad-->
 
 <!--acerca de la pagina-->
 <div id="about-modal" class="modal">
-        <div class="modal-content ligth-dark">
-            <div class="modal-header">
-                <h4 class="modal-title">Acerca de</h4>
+    <div class="modal-content ligth-dark">
+        <div class="modal-header">
+            <h4 class="modal-title">Acerca de</h4>
+        </div>
+        <div class="modal-body">
+            <div class="center-align" id="spinner-about">
+                <div class="preloader-wrapper big active">
+                    <div class="spinner-layer spinner-blue-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                        <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                    </div>
+                </div>
+                {#                <i class="fa fa-spinner fa-spin fa-5x" id="spinner-about"></i>#}
             </div>
-            <div class="modal-body">
-                <div class="text-center">
-                    <i class="fa fa-spinner fa-spin fa-5x" id="spinner-about"></i>
-                </div>
-                <div id="about-content">
-                    {#                        contenido del about#}
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="text-left">
-                    <footer><strong>Grupo de desarrollo The Wall</strong></footer>
-                </div>
-                <a class="modal-action modal-close waves-effect waves-green btn btn-flat">Cerrar</a>
+            <div id="about-content">
+                {#                        contenido del about#}
             </div>
         </div>
+        <div class="modal-footer">
+            <div class="text-left">
+                <footer><strong>Grupo de desarrollo The Wall</strong></footer>
+            </div>
+            <a class="modal-action modal-close waves-effect waves-green btn btn-flat">Cerrar</a>
+        </div>
+    </div>
 </div>
 <!--fin del acerca de-->
 <script src="{% static 'js/jquery-2.0.1.min.js' %}"></script>
