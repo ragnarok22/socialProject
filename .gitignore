@@ -59,7 +59,11 @@ docs/_build/
 target/
 
 #Ipython Notebook
+<<<<<<< HEAD
 .ipynb_checkpoints
 
 # JetBrain folder
 .idea/
+=======
+.ipynb_checkpoints
+>>>>>>> e05e2e0a0dcad878b4d922b00b80f6a2d474088a
