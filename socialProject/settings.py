@@ -39,7 +39,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'account',
     'rest_framework',
+    'materialize',
     'crispy_forms',
+    'crispy_forms_materialize',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -105,4 +107,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap3'
+# CRISPY_TEMPLATE_PACK = 'bootstrap3'
+# CRISPY_TEMPLATE_PACK = 'materialize_css_forms'
