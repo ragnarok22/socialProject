@@ -1,8 +1,11 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, FormView
+
+from .forms import LoginForm
 
 
-class LoginView(TemplateView):
+class LoginView(FormView):
     template_name = 'account/login.html'
+    form_class = LoginForm
 
 
 class AboutView(TemplateView):
