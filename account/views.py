@@ -9,8 +9,8 @@ class LoginView(FormView):
     form_class = LoginForm
 
     def form_valid(self, form):
-        user = authenticate(username=form.instance.username, password=form.instance.password)
-        if user is None:
+        user = authenticate(username=form.cleaned_data['username'], password=form.cleaned_data['password'])
+        if user is not None:
             if user.is_active:
                 message = 'el usuario es valido'
                 login(request=self.request, user=user)
@@ -19,6 +19,10 @@ class LoginView(FormView):
         else:
             message = 'El usuario y/o la contraseña son incorrectos'
         return super(LoginView, self).form_valid(form)
+
+
+class DashboardView(TemplateView):
+    template_name = 'account/dashboard.html'
 
 
 class AboutView(TemplateView):

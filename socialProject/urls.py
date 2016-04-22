@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^about/$', AboutView.as_view(), name='about'),
     url(r'^terms/$', TermsView.as_view(), name='terms'),
     url(r'^privacy/$', PrivacyView.as_view(), name='privacy'),
+    url(r'^', include('account.urls', namespace='account'))
 ]
