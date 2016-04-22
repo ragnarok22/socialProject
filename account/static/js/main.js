@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     $('#terms').click(function () {
         $('#spinner-terms').show(500);
-        $('#terms-content').load('terms', function (response, status, xhr) {
+        $('#terms-content').load('/terms', function (response, status, xhr) {
             if(status == 'error'){
                 $('#terms-content').append('<h3><i class="material-icons">error</i> Se ha producido un error ' + xhr.status + '</h3>');
             }
@@ -16,7 +16,7 @@ $(document).ready(function () {
     });
     $('#about').click(function () {
         $('#spinner-about').show(500);
-        $('#about-content').load('about', function (response, status, xhr) {
+        $('#about-content').load('/about', function (response, status, xhr) {
             if(status == 'error'){
                 $('#about-content').append('<h3><i class="material-icons">error</i> Se ha producido un error ' + xhr.status + '</h3>');
             }
@@ -25,7 +25,7 @@ $(document).ready(function () {
     });
     $('#privacy').click(function () {
         $('#spinner-privacy').show(500);
-        $('#privacy-content').load('privacy', function (response, status, xhr) {
+        $('#privacy-content').load('/privacy', function (response, status, xhr) {
             if(status == 'error'){
                 $('#privacy-content').append('<h3><i class="material-icons">error</i> Se ha producido un error ' + xhr.status + '</h3>');
             }
