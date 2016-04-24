@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate, login
+from django.core.urlresolvers import reverse
 from django.views.generic import TemplateView, FormView
 
 from .forms import LoginForm
@@ -7,6 +8,11 @@ from .forms import LoginForm
 class LoginView(FormView):
     template_name = 'account/login.html'
     form_class = LoginForm
+    success_url = 'dashboard'
+
+    def form_invalid(self, form):
+        message = 'Por favor rellene los campos'
+        return super(LoginView, self).form_invalid(form)
 
     def form_valid(self, form):
         user = authenticate(username=form.cleaned_data['username'], password=form.cleaned_data['password'])
