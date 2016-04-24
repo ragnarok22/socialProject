@@ -13,3 +13,33 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+.login {
+    width: 100%;
+}
+
+.login button {
+    margin-bottom: 2vh;
+}
+
+.login input {
+    margin-right: 3vh;
+}
+
+@media only screen and (max-width: 1980px){
+    .login {
+        margin-top: 12vh;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .login {
+        margin-top: 10vh;
+    }
+}
+
+@media only screen and (max-width: 520px){
+    .login {
+        margin-top: 5vh;
+    }
+}
