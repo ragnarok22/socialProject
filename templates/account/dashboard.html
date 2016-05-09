@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block title %}Dashboard{% endblock %}
 
@@ -14,7 +15,7 @@
                         <div class="input-field">
                             <input type="search" id="search">
                             <label for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons">close</i>
+                            <i class="material-icons" id="close-search">close</i>
                         </div>
                     </form>
                 </li>
@@ -66,4 +67,7 @@
                 porro.</p>
         </section>
     </main>
+{% endblock %}
+{% block script %}
+    <script src="{% static 'js/dashboard.js' %}"></script>
 {% endblock %}

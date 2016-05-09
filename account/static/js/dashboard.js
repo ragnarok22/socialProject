@@ -1,3 +1,5 @@
-/**
- * Created by ceramica on 9/05/16.
- */
+$(document).ready(function () {
+    $('#close-search').click(function () {
+        $('#search').val('');
+    });
+});
