@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    {% load i18n %}
     {% load staticfiles %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -41,13 +42,11 @@
             </a> |
             <a href="#privacy-modal" class="white-text text-lighten-3 waves-effect waves-light modal-trigger" id="privacy">
                 Privacidad
+            </a> |
+            <a href="#language-modal" class="white-text text-lighten-3 waves-effect waves-light modal-trigger" id="language">
+                Idioma
             </a>
-            <a href="#" class="dropdown-button btn" data-activates="language">Idioma</a>
         </div>
-        <ul class="dropdown-content" id="language">
-            <li><a href="#">Español</a></li>
-            <li><a href="#">Ingles</a></li>
-        </ul>
     </div>
 </footer>
 <!--fin del pie de la pagina-->
@@ -158,6 +157,38 @@
     </div>
 </div>
 <!--fin del acerca de-->
+
+<!-- idioma de la pagina -->
+<div class="modal" id="language-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <a href="#" class="right modal-close"><i class="material-icons grey-text">close</i></a>
+            <div class="modal-title">Idioma</div>
+        </div>
+        <div class="modal-content">
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}" />
+                <select name="language">
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                            {{ language.name_local }} ({{ language.code }})
+                        </option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Cambiar Idioma" class="btn waves-effect waves-green" />
+            </form>
+        </div>
+        <div class="modal-footer">
+            <div class="text-left">
+                <footer><strong>Grupo de desarrollo The Wall</strong></footer>
+            </div>
+            <a class="modal-action modal-close waves-effect waves-green btn btn-flat">Cerrar</a>
+        </div>
+    </div>
+</div>
+<!-- fin de idioma de la pagina -->
 
 <script src="{% static 'js/jquery-2.0.1.min.js' %}"></script>
 {#<script src="{% static 'js/bootstrap.min.js' %}"></script>#}
