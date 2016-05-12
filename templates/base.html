@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
     {% load i18n %}
     {% load staticfiles %}
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/icon.css' %}">
     <link rel="stylesheet" href="{% static 'css/roboto.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/toastr.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/toastr.min.css' %}">
     {#    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">#}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     {% block styles %}{% endblock %}
@@ -25,26 +25,25 @@
     <div class="container">
         <div class="row">
             <div class="col l6">
-                <h5 class="white-text">¿Qué es The Wall?</h5>
-                <p class="grey-text text-lighten-4">La Red Social The Wall está dedicada a la superaci&oacute;n
-                    profesional, hacer nuevas amistades y compartir el conocimiento entre toda la comunidad universitaria.</p>
+                <h5 class="white-text">{% trans '¿Qué es The Wall?' %}</h5>
+                <p class="grey-text text-lighten-4">{% trans 'La Red Social The Wall está dedicada a la superación profesional, hacer nuevas amistades y compartir el conocimiento entre toda la comunidad universitaria.' %}</p>
             </div>
         </div>
     </div>
     <div class="footer-copyright">
         <div class="container">
-            <span class="hide-on-small-only">&COPY; 2015 - 2016. Creado por Ragnarok. Todos los derechos reservados.</span>
+            <span class="hide-on-small-only">&COPY; 2015 - 2016. {% trans 'Creado por Ragnarok. Todos los derechos reservados.' %}</span>
             <a href="#terms-modal" class="white-text text-lighten-3 waves-effect waves-light modal-trigger" id="terms">
-                Términos
+                {% trans 'Términos' %}
             </a> |
             <a href="#about-modal" class="white-text text-lighten-3 waves-effect waves-light modal-trigger" id="about">
-                Acerca de
+                {% trans 'Acerca de' %}
             </a> |
             <a href="#privacy-modal" class="white-text text-lighten-3 waves-effect waves-light modal-trigger" id="privacy">
-                Privacidad
+                {% trans 'Privacidad' %}
             </a> |
             <a href="#language-modal" class="white-text text-lighten-3 waves-effect waves-light modal-trigger" id="language">
-                Idioma
+                {% trans 'Idioma' %}
             </a>
         </div>
     </div>
@@ -127,7 +126,7 @@
     <div class="modal-content ligth-dark">
         <div class="modal-header">
             <a href="#" class="right modal-close"><i class="material-icons grey-text">close</i></a>
-            <h4 class="modal-title">Acerca de</h4>
+            <h4 class="modal-title">{% trans 'Acerca de' %}</h4>
         </div>
         <div class="modal-body">
             <div class="center-align" id="spinner-about">
@@ -150,9 +149,9 @@
         </div>
         <div class="modal-footer">
             <div class="text-left">
-                <footer><strong>Grupo de desarrollo The Wall</strong></footer>
+                <footer><strong>{% trans 'Grupo de desarrollo The Wall' %}</strong></footer>
             </div>
-            <a class="modal-action modal-close waves-effect waves-green btn btn-flat">Cerrar</a>
+            <a class="modal-action modal-close waves-effect waves-green btn btn-flat">{% trans 'Cerrar' %}</a>
         </div>
     </div>
 </div>
@@ -163,7 +162,7 @@
     <div class="modal-content">
         <div class="modal-header">
             <a href="#" class="right modal-close"><i class="material-icons grey-text">close</i></a>
-            <div class="modal-title">Idioma</div>
+            <div class="modal-title">{% trans 'Idioma' %}</div>
         </div>
         <div class="modal-content">
             <form action="{% url 'set_language' %}" method="post">
@@ -177,14 +176,14 @@
                         </option>
                     {% endfor %}
                 </select>
-                <input type="submit" value="Cambiar Idioma" class="btn waves-effect waves-green" />
+                <input type="submit" value="{% trans 'Cambiar Idioma' %}" class="btn waves-effect waves-green" />
             </form>
         </div>
         <div class="modal-footer">
             <div class="text-left">
-                <footer><strong>Grupo de desarrollo The Wall</strong></footer>
+                <footer><strong>{% trans 'Grupo de desarrollo The Wall' %}</strong></footer>
             </div>
-            <a class="modal-action modal-close waves-effect waves-green btn btn-flat">Cerrar</a>
+            <a class="modal-action modal-close waves-effect waves-green btn btn-flat">{% trans 'Cerrar' %}</a>
         </div>
     </div>
 </div>

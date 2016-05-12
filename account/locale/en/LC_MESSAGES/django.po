@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-11 22:24+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: socialProject/settings.py:110
+msgid "Español"
+msgstr "Spanish"
+
+#: socialProject/settings.py:111
+msgid "Inglés"
+msgstr "English"
+
+#: templates/base.html:28
+msgid "¿Qué es The Wall?"
+msgstr "What is The Wall?"
+
+#: templates/base.html:29
+msgid ""
+"La Red Social The Wall está dedicada a la superación profesional, hacer "
+"nuevas amistades y compartir el conocimiento entre toda la comunidad "
+"universitaria."
+msgstr ""
+"The Wall Social Network is dedicated to professional superation, to make new "
+"friendship and share the knowledge between all community"
+
+#: templates/base.html:35
+msgid "Creado por Ragnarok. Todos los derechos reservados."
+msgstr "Create by Ragnarok. All right reserved."
+
+#: templates/base.html:37
+msgid "Términos"
+msgstr "Terms"
+
+#: templates/base.html:40 templates/base.html.py:129
+msgid "Acerca de"
+msgstr "About"
+
+#: templates/base.html:43
+msgid "Privacidad"
+msgstr "Privacy"
+
+#: templates/base.html:46 templates/base.html.py:165
+msgid "Idioma"
+msgstr "Language"
+
+#: templates/base.html:152 templates/base.html.py:184
+msgid "Grupo de desarrollo The Wall"
+msgstr "The Wall Develop Group"
+
+#: templates/base.html:154 templates/base.html.py:186
+msgid "Cerrar"
+msgstr "Close"
+
+#: templates/base.html:179
+msgid "Cambiar Idioma"
+msgstr "Change Language"

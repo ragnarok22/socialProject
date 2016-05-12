@@ -110,3 +110,5 @@ LANGUAGES = (
     ('es', _('Español')),
     ('en', _('Inglés')),
 )
+
+LOGIN_URL = ''
