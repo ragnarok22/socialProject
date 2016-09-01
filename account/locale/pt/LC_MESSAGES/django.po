@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-01 17:49+0000\n"
+"POT-Creation-Date: 2016-09-01 18:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,23 +20,27 @@ msgstr ""
 
 #: socialProject/settings.py:111
 msgid "Español"
-msgstr ""
+msgstr "Espanhol"
 
 #: socialProject/settings.py:112
 msgid "Inglés"
-msgstr ""
+msgstr "Inglês"
+
+#: socialProject/settings.py:113
+msgid "Portugués"
+msgstr "Português"
 
 #: templates/account/login.html:14
 msgid "Usuario"
-msgstr ""
+msgstr "Usuário"
 
 #: templates/account/login.html:19
 msgid "Contraseña"
-msgstr ""
+msgstr "Senha"
 
 #: templates/account/login.html:23
 msgid "Recuérdame"
-msgstr ""
+msgstr "Recuerdame"
 
 #: templates/account/login.html:27
 msgid "Entrar"
@@ -44,7 +48,7 @@ msgstr ""
 
 #: templates/base.html:28
 msgid "¿Qué es The Wall?"
-msgstr ""
+msgstr "Entrar"
 
 #: templates/base.html:29
 msgid ""
@@ -52,35 +56,37 @@ msgid ""
 "nuevas amistades y compartir el conocimiento entre toda la comunidad "
 "universitaria."
 msgstr ""
+"A Rede Social The Wall é dedicada ao avanço profissional, fazer novas "
+"amizades e partilha de conhecimentos em toda a comunidade universidade."
 
 #: templates/base.html:35
 msgid "Creado por Ragnarok. Todos los derechos reservados."
-msgstr ""
+msgstr "Criado por Ragnarok. Todos os direitos reservados."
 
 #: templates/base.html:37
 msgid "Términos"
-msgstr ""
+msgstr "condições"
 
 #: templates/base.html:40 templates/base.html.py:129
 msgid "Acerca de"
-msgstr ""
+msgstr "Sobre"
 
 #: templates/base.html:43
 msgid "Privacidad"
-msgstr ""
+msgstr "Privacidade"
 
 #: templates/base.html:46 templates/base.html.py:165
 msgid "Idioma"
-msgstr ""
+msgstr "Idioma"
 
 #: templates/base.html:152 templates/base.html.py:184
 msgid "Grupo de desarrollo The Wall"
-msgstr ""
+msgstr "Grupo de Desenvolvimento The Wall"
 
 #: templates/base.html:154 templates/base.html.py:186
 msgid "Cerrar"
-msgstr ""
+msgstr "Perto"
 
 #: templates/base.html:179
 msgid "Cambiar Idioma"
-msgstr ""
+msgstr "Mudar Idioma"

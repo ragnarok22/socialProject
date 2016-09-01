@@ -110,6 +110,7 @@ STATIC_URL = '/static/'
 LANGUAGES = (
     ('es', _('Español')),
     ('en', _('Inglés')),
+    ('pt', _('Portugués')),
 )
 
 LOGIN_URL = ''
