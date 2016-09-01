@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-01 18:05+0000\n"
+"POT-Creation-Date: 2016-09-01 18:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,19 @@ msgstr "Inglês"
 msgid "Portugués"
 msgstr "Português"
 
-#: templates/account/login.html:14
+#: templates/account/dashboard.html:11
+msgid "Inicio"
+msgstr "Iniciação"
+
+#: templates/account/dashboard.html:12
+msgid "Grupos"
+msgstr "Grupos"
+
+#: templates/account/dashboard.html:13
+msgid "Fotos"
+msgstr "Fotos"
+
+#: templates/account/dashboard.html:30 templates/account/login.html:14
 msgid "Usuario"
 msgstr "Usuário"
 
@@ -44,11 +56,11 @@ msgstr "Recuerdame"
 
 #: templates/account/login.html:27
 msgid "Entrar"
-msgstr ""
+msgstr "Entrar"
 
 #: templates/base.html:28
 msgid "¿Qué es The Wall?"
-msgstr "Entrar"
+msgstr "¿O que é The Wall?"
 
 #: templates/base.html:29
 msgid ""
@@ -90,3 +102,8 @@ msgstr "Perto"
 #: templates/base.html:179
 msgid "Cambiar Idioma"
 msgstr "Mudar Idioma"
+
+#, fuzzy
+#~| msgid "Usuario"
+#~ msgid "usuario"
+#~ msgstr "Usuário"

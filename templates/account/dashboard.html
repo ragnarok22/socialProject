@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load i18n %}
 
 {% block title %}Dashboard{% endblock %}
 
@@ -7,9 +8,9 @@
     <nav class="teal" role="navigation">
         <div class="nav-wrapper container-fluid">
             <ul class="hide-on-med-and-down">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Grupos</a></li>
-                <li><a href="#">Fotos</a></li>
+                <li><a href="#">{% trans 'Inicio' %}</a></li>
+                <li><a href="#">{% trans 'Grupos' %}</a></li>
+                <li><a href="#">{% trans 'Fotos' %}</a></li>
                 <li>
                     <form>
                         <div class="input-field">
@@ -26,7 +27,7 @@
                 <li><a href="#">cerrar sesion</a></li>
             </ul>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#" data-activates="testings" class="navbar-collapse">usuario</a></li>
+                <li><a href="#" data-activates="testings" class="navbar-collapse">{% trans 'Usuario' %}</a></li>
             </ul>
             <ul id="nav-mobile" class="side-nav">
                 <li><a href="#">Inicio</a></li>

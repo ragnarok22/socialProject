@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-01 18:05+0000\n"
+"POT-Creation-Date: 2016-09-01 18:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,19 @@ msgstr "English"
 msgid "Portugués"
 msgstr "Portuguese"
 
-#: templates/account/login.html:14
+#: templates/account/dashboard.html:11
+msgid "Inicio"
+msgstr "Home"
+
+#: templates/account/dashboard.html:12
+msgid "Grupos"
+msgstr "Group"
+
+#: templates/account/dashboard.html:13
+msgid "Fotos"
+msgstr "Photos"
+
+#: templates/account/dashboard.html:30 templates/account/login.html:14
 msgid "Usuario"
 msgstr "Username"
 
@@ -89,3 +101,8 @@ msgstr "Close"
 #: templates/base.html:179
 msgid "Cambiar Idioma"
 msgstr "Change Language"
+
+#, fuzzy
+#~| msgid "Usuario"
+#~ msgid "usuario"
+#~ msgstr "Username"
