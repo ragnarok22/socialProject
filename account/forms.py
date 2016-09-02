@@ -12,3 +12,9 @@ class LoginForm(forms.Form):
         required=True,
         widget=forms.PasswordInput(attrs={'class': 'validate', 'id': 'password'})
     )
+
+    def get_password(self):
+        return self.cleaned_data['password']
+
+    def get_user(self):
+        return self.cleaned_data['username']

@@ -33,3 +33,16 @@
         </div>
     </div>
 {% endblock %}
+{% block script %}
+    <script>
+        {% if form.errors %}
+            {% for error in form.errors %}
+                if('{{ error }}' == 'inactive'){
+                    Materialize.toast('El usuario ha sido baneado', 2000, 'yellow');
+                } else if('{{ error }}' == 'incorrect'){
+                    Materialize.toast('Usuario o contraseña incorrectos', 2000, 'red');
+                }
+            {% endfor %}
+        {% endif %}
+    </script>
+{% endblock %}

@@ -1,12 +1,16 @@
-from django.contrib.auth import login, logout
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import login, logout, authenticate
 from django.http import HttpResponseRedirect
 from django.views.generic import TemplateView, FormView, RedirectView
+from django.utils.translation import gettext as _
+from django.contrib.auth.forms import AuthenticationForm
+
+from account.forms import LoginForm
 
 
 class LoginView(FormView):
     template_name = 'account/login.html'
-    form_class = AuthenticationForm
+    form_class = LoginForm
+    # form_class = AuthenticationForm
     success_url = 'dashboard'
 
     def dispatch(self, request, *args, **kwargs):
@@ -15,9 +19,26 @@ class LoginView(FormView):
         else:
             return super(LoginView, self).dispatch(request, *args, **kwargs)
 
+    def get_context_data(self, **kwargs):
+        context = super(LoginView, self).get_context_data(**kwargs)
+        return context
+
     def form_valid(self, form):
-        login(self.request, form.get_user())
-        return super(LoginView, self).form_valid(form)
+        user = authenticate(username=form.get_user(), password=form.get_password())
+        if user is not None:
+            if not user.is_active:
+                form.errors['inactive'] = _('El usuario ha sido baneado')
+                return self.form_invalid(form)
+
+            login(self.request, user)
+            return super(LoginView, self).form_valid(form)
+
+        else:
+            form.errors['incorrect'] = _('Usuario o contraseña incorrecto')
+            return self.form_invalid(form)
+
+    def form_invalid(self, form):
+        return super(LoginView, self).form_invalid(form)
 
 
 class LogoutView(RedirectView):
