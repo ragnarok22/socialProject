@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-01 18:28+0000\n"
+"POT-Creation-Date: 2016-09-02 12:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,6 +29,15 @@ msgstr "Inglês"
 #: socialProject/settings.py:113
 msgid "Portugués"
 msgstr "Português"
+
+#: templates/account/about.html:2 templates/base.html:29
+msgid ""
+"La Red Social The Wall está dedicada a la superación profesional, hacer "
+"nuevas amistades y compartir el conocimiento entre toda la comunidad "
+"universitaria."
+msgstr ""
+"A Rede Social The Wall é dedicada ao avanço profissional, fazer novas "
+"amizades e partilha de conhecimentos em toda a comunidade universidade."
 
 #: templates/account/dashboard.html:11
 msgid "Inicio"
@@ -58,24 +67,88 @@ msgstr "Recuerdame"
 msgid "Entrar"
 msgstr "Entrar"
 
+#: templates/account/privacy.html:2
+msgid "Nuestra red es visible en todo el dominio *.cu (RED CUBA)"
+msgstr "Nossa rede é visível em todo o .cu domínio * (RED CUBA)"
+
+#: templates/account/terms.html:2
+msgid "Políticas de publicación en la red social"
+msgstr "Políticas de publicação na rede social"
+
+#: templates/account/terms.html:4
+msgid ""
+"Todo usuario debe subir una foto al perfil, preferentemente de carácter "
+"personal.(No pueden ser sin camisa)."
+msgstr ""
+"Todos os usuários devem carregar uma foto de perfil, de preferência pessoal. "
+"(Eles não podem ser sem camisa)."
+
+#: templates/account/terms.html:5
+msgid "No se pueden poner imágenes o avatares pornográficos."
+msgstr "Você não pode colocar fotos pornográficas ou avatares."
+
+#: templates/account/terms.html:6
+msgid ""
+"Todo usuario debe llenar su perfil con la mayor cantidad de datos posible, "
+"preferentemente su ubicación."
+msgstr ""
+"Todos os usuários devem preencher o seu perfil com o máximo de dados "
+"possível, de preferência a sua localização."
+
+#: templates/account/terms.html:7
+msgid ""
+"Ser cuidadoso para lograr un uso correcto de la lengua materna y/o "
+"extranjera empleada en la redacción de los mensajes."
+msgstr ""
+"Tenha cuidado para o uso correto da língua materna e / ou empregado "
+"estrangeiro na escrita de mensagens."
+
+#: templates/account/terms.html:8
+msgid ""
+"Es prohibido los mensajes, blogs, páginas, archivos e imágenes con "
+"contenidos obscenos, eróticos y no acordes con los principios éticos y "
+"morales."
+msgstr ""
+"É proibida mensagens, blogs, páginas, arquivos e imagens com obscena, "
+"erótico e não de acordo com os princípios éticos e morais."
+
+#: templates/account/terms.html:9
+msgid "Los Grupos deben tener más de 3 usuarios para que estén activos."
+msgstr "Os grupos devem ter mais de 3 usuários para ser ativo."
+
+#: templates/account/terms.html:10
+msgid "Están prohibido los contenidos con carácter contrarrevolucionarios."
+msgstr "Eles estão proibidos de conteúdo com caráter não-revolucionário."
+
+#: templates/account/terms.html:11
+msgid "Está prohibido utilizar la red para actividades económicas."
+msgstr "Você não pode usar a rede para as actividades económicas."
+
+#: templates/account/terms.html:12
+msgid "No caer en faltas de respeto entre los usuarios de la red."
+msgstr "Não caia na desrespeito entre os usuários da rede."
+
+#: templates/account/terms.html:13
+msgid ""
+"Los Administradores se reservan el derecho a eliminar todo contenido que no "
+"cumpla con las normas del sitio."
+msgstr ""
+"Os Administradores reservam-se o direito de remover qualquer conteúdo que "
+"não esteja em conformidade com as regras do site."
+
+#: templates/account/terms.html:14
+msgid "El desconocimiento de las reglas no exime de responsabilidad."
+msgstr "O desconhecimento das regras não isenta de responsabilidade."
+
 #: templates/base.html:28
 msgid "¿Qué es The Wall?"
 msgstr "¿O que é The Wall?"
-
-#: templates/base.html:29
-msgid ""
-"La Red Social The Wall está dedicada a la superación profesional, hacer "
-"nuevas amistades y compartir el conocimiento entre toda la comunidad "
-"universitaria."
-msgstr ""
-"A Rede Social The Wall é dedicada ao avanço profissional, fazer novas "
-"amizades e partilha de conhecimentos em toda a comunidade universidade."
 
 #: templates/base.html:35
 msgid "Creado por Ragnarok. Todos los derechos reservados."
 msgstr "Criado por Ragnarok. Todos os direitos reservados."
 
-#: templates/base.html:37
+#: templates/base.html:37 templates/base.html.py:58
 msgid "Términos"
 msgstr "condições"
 
@@ -83,7 +156,7 @@ msgstr "condições"
 msgid "Acerca de"
 msgstr "Sobre"
 
-#: templates/base.html:43
+#: templates/base.html:43 templates/base.html.py:94
 msgid "Privacidad"
 msgstr "Privacidade"
 
@@ -91,19 +164,16 @@ msgstr "Privacidade"
 msgid "Idioma"
 msgstr "Idioma"
 
-#: templates/base.html:152 templates/base.html.py:184
+#: templates/base.html:81 templates/base.html.py:117 templates/base.html:152
+#: templates/base.html.py:184
 msgid "Grupo de desarrollo The Wall"
 msgstr "Grupo de Desenvolvimento The Wall"
 
-#: templates/base.html:154 templates/base.html.py:186
+#: templates/base.html:83 templates/base.html.py:119 templates/base.html:154
+#: templates/base.html.py:186
 msgid "Cerrar"
 msgstr "Perto"
 
 #: templates/base.html:179
 msgid "Cambiar Idioma"
 msgstr "Mudar Idioma"
-
-#, fuzzy
-#~| msgid "Usuario"
-#~ msgid "usuario"
-#~ msgstr "Usuário"
