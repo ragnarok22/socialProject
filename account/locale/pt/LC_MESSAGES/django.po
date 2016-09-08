@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-02 12:49+0000\n"
+"POT-Creation-Date: 2016-09-08 12:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: account/views.py:33
+msgid "El usuario ha sido baneado"
+msgstr "O usuário foi banido"
+
+#: account/views.py:40
+msgid "Usuario o contraseña incorrecto"
+msgstr "Nome de usuário ou senha está incorreta"
 
 #: socialProject/settings.py:111
 msgid "Español"
