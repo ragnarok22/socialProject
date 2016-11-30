@@ -1,7 +1,5 @@
 from django.contrib.auth import login, logout, authenticate
-from django.core.urlresolvers import reverse, reverse_lazy
 from django.http import HttpResponseRedirect
-from django.utils.datastructures import MultiValueDictKeyError
 from django.views.generic import TemplateView, FormView, RedirectView
 from django.utils.translation import gettext as _
 from django.contrib.auth.decorators import login_required
@@ -13,10 +11,9 @@ from account.forms import LoginForm
 class LoginView(FormView):
     template_name = 'account/login.html'
     form_class = LoginForm
-    # form_class = AuthenticationForm
 
     def dispatch(self, request, *args, **kwargs):
-        self.success_url = self.request.GET.get('next','')
+        self.success_url = self.request.GET.get('next', '/dashboard/')
         if request.user.is_authenticated():
             return HttpResponseRedirect(self.get_success_url())
         else:
@@ -55,13 +52,9 @@ class LogoutView(RedirectView):
 class DashboardView(TemplateView):
     template_name = 'account/dashboard.html'
 
-    @method_decorator(login_required)
+    @method_decorator(login_required(login_url='/'))
     def dispatch(self, request, *args, **kwargs):
         return super(DashboardView, self).dispatch(request, *args, **kwargs)
-
-    def get_context_data(self, **kwargs):
-        context = super(DashboardView, self).get_context_data(**kwargs)
-        return context
 
 
 class AboutView(TemplateView):

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-20 15:25+0000\n"
+"POT-Creation-Date: 2016-11-15 18:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -158,7 +158,7 @@ msgstr "Criado por Ragnarok. Todos os direitos reservados."
 
 #: templates/base.html:37 templates/base.html.py:58
 msgid "Términos"
-msgstr "condições"
+msgstr "Condições"
 
 #: templates/base.html:40 templates/base.html.py:129
 msgid "Acerca de"
